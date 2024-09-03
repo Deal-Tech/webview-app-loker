@@ -426,19 +426,21 @@ class _S2WidgetState extends State<S2Widget> {
         ),
         body: SafeArea(
           top: true,
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                FlutterFlowWebView(
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Container(
+                height: MediaQuery.sizeOf(context).height * 0.85,
+                decoration: const BoxDecoration(),
+                child: FlutterFlowWebView(
                   content: 'https://www.disnakerja.com/pendidikan/s2',
                   bypass: false,
                   height: MediaQuery.sizeOf(context).height * 1.0,
                   verticalScroll: false,
                   horizontalScroll: false,
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

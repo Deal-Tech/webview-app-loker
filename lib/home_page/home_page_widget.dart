@@ -426,19 +426,22 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         ),
         body: SafeArea(
           top: true,
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                FlutterFlowWebView(
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Container(
+                height: MediaQuery.sizeOf(context).height * 0.85,
+                decoration: const BoxDecoration(),
+                child: FlutterFlowWebView(
                   content: 'https://www.disnakerja.com/',
                   bypass: false,
                   height: MediaQuery.sizeOf(context).height * 1.0,
                   verticalScroll: false,
                   horizontalScroll: false,
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

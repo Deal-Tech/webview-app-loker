@@ -426,11 +426,13 @@ class _MtOdpWidgetState extends State<MtOdpWidget> {
         ),
         body: SafeArea(
           top: true,
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                FlutterFlowWebView(
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Container(
+                height: MediaQuery.sizeOf(context).height * 0.85,
+                decoration: const BoxDecoration(),
+                child: FlutterFlowWebView(
                   content:
                       'https://www.disnakerja.com/kategori/management-trainee/',
                   bypass: false,
@@ -438,8 +440,8 @@ class _MtOdpWidgetState extends State<MtOdpWidget> {
                   verticalScroll: false,
                   horizontalScroll: false,
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
